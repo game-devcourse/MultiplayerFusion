@@ -1,17 +1,17 @@
 # MultiplayerFusion
  
-במשחק זה ניתן לשחק מספר רב(עד 20) משתתפים, המטרה במשחק היא להוריד כמה שיותר נקודות לשחקנים האחרים ולצבור כמה שיותר נקודות פגיעה.
-2 השינויים שנעשו במשחק מהשיעור הם:
-1. הוספת ניקוד לכל שחקן שכאשר הוא פוגע בשחקן אחר מתווספת לו נקודה.
+This game can be played by a large number of participants (up to 20), the goal of the game is to drop as many points as possible to the other players and accumulate as many damage points as possible.
+The 2 changes made to the game from the lesson are:
+1. Adding a score to each player who, when he hits another player, a point is added to him.
    
-   הסקריפט שהוספנו הוא: [score](https://github.com/game-devcourse/MultiplayerFusion/blob/main/Assets/Scripts/Score.cs).
+    The script we added is: [score](https://github.com/game-devcourse/MultiplayerFusion/blob/main/Assets/Scripts/Score.cs).
    
-   בנוסף לסקריפט זה הוספנו בסקריפט [RaycastAttack](https://github.com/game-devcourse/MultiplayerFusion/blob/main/Assets/Scripts/RaycastAttack.cs) בשורות 70-72 שכאשר השחקן פוגע בשחקן אחר גם מתווסף לו הניקוד בנוסף להורדת הניקוד של השחקן האחר.
+    In addition to this script, we added in the script [RaycastAttack](https://github.com/game-devcourse/MultiplayerFusion/blob/main/Assets/Scripts/RaycastAttack.cs) in lines 70-72 that when the player hits another player, the score is also added to him in addition to downloading the other player's score.
 
-2. הוספת מגן בתחילת המשחק שהשחקן הראשון שלוקח אותו זכאי להגנה של כמה שניות(אותן ניתן לקבוע דרך הunity).
+2. Adding a shield at the beginning of the game that the first player who takes it is entitled to protection for a few seconds (which can be determined through unity).
    
-   הסקריפטים שהוספנו הם [Shield](https://github.com/game-devcourse/MultiplayerFusion/blob/main/Assets/Scripts/Shield.cs) ו[ShieldSpawner](https://github.com/game-devcourse/MultiplayerFusion/blob/main/Assets/Scripts/ShieldSpawner.cs).
+    The scripts we added are [Shield](https://github.com/game-devcourse/MultiplayerFusion/blob/main/Assets/Scripts/Shield.cs) and [ShieldSpawner](https://github.com/game-devcourse/ MultiplayerFusion/blob/main/Assets/Scripts/ShieldSpawner.cs).
    
-   הסקריפט של הShield מחובר לprefab של השחקן ובעצם הוא האחראי להפעיל את המגן על השחקן הנתון, והShieldSpawner מחובר לshield עצמו(על מנת שייעלם ויופיע אצל כל השחקן כאחד ובעצם יהיה מחובר לעולם עצמו), מלבד זאת כמובן שהוספנו לסקריפט [RaycastAttack](https://github.com/game-devcourse/MultiplayerFusion/blob/main/Assets/Scripts/RaycastAttack.cs) את הבדיקה האם השחקן שבו אנו אמורים לפגוע מוגן ובמידה וכן אז הפגיעה לא עובדת.
+    The shield script is connected to the player's prefab and is actually responsible for activating the shield on the given player, and the ShieldSpawner is connected to the shield itself (in order for it to disappear and appear for all players alike and actually be connected to the world itself), apart from this, of course, we added [RaycastAttack] to the script (https:// github.com/game-devcourse/MultiplayerFusion/blob/main/Assets/Scripts/RaycastAttack.cs) the test whether the player we are supposed to hit is protected and if yes then the hit doesn't work.
 
-[למשחק](https://edenxhadar.itch.io/multiplayer-game)
+[for game](https://edenxhadar.itch.io/multiplayer-game)
